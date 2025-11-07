@@ -113,7 +113,7 @@ export default function Home() {
             <div className="h-12 w-12 rounded-lg overflow-hidden shadow-md">
               <img src={gymLogo} alt="HOC Fitness" className="h-full w-full object-cover" />
             </div>
-            <span className="font-heading text-xl md:text-2xl font-bold bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">
+            <span className="font-heading text-xl md:text-2xl font-bold text-white">
               HOC Fitness
             </span>
           </div>
@@ -168,40 +168,40 @@ export default function Home() {
           </Sheet>
           
           {/* Desktop Navigation Menu */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6">
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               HOME
             </button>
             <button 
               onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               PROGRAM
             </button>
             <button 
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               PRICING
             </button>
             <button 
               onClick={() => document.getElementById('trainers')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               TRAINERS
             </button>
             <button 
               onClick={() => document.getElementById('transformations')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               BEFORE & AFTER
             </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               CONTACT
             </button>
@@ -359,10 +359,10 @@ export default function Home() {
                 Fill out the form and we'll contact you within 24 hours to discuss your fitness goals
               </p>
             </div>
-            <Card className="p-5 md:p-10 lg:p-14 shadow-xl shadow-primary/10 border-2 border-primary/20 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+            <Card className="p-4 md:p-6 lg:p-8 shadow-xl shadow-primary/10 border-2 border-primary/20 backdrop-blur hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
                     <FormField
                       control={form.control}
                       name="name"
@@ -429,14 +429,14 @@ export default function Home() {
                   />
                   <Button 
                     type="submit" 
-                    size="lg" 
-                    className="w-full rounded-full text-lg py-6" 
+                    size="default" 
+                    className="w-full rounded-full text-sm py-4" 
                     disabled={contactMutation.isPending}
                     data-testid="button-submit-form"
                   >
                     {contactMutation.isPending ? (
                       <>
-                        <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                        <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                         Sending...
                       </>
                     ) : (
