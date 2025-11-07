@@ -110,11 +110,8 @@ export default function Home() {
       {/* Navigation Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-20 items-center justify-between px-4 md:px-6">
-          <div className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-lg overflow-hidden shadow-md">
-              <img src={gymLogo} alt="HOC Fitness" className="h-full w-full object-cover" />
-            </div>
-            <span className="font-heading text-xl md:text-2xl font-bold text-foreground">
+          <div className="flex items-center">
+            <span className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
               HOC Fitness
             </span>
           </div>
