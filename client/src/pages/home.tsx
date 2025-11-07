@@ -247,40 +247,40 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/30">
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center lg:overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/30">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(37,99,235,0.08),transparent_50%)]" />
-        <div className="container py-20 md:py-32 relative px-4 md:px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-            <div className="space-y-10 text-center lg:text-left">
+        <div className="container py-4 lg:py-12 relative px-4 md:px-6">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-12 items-center max-w-7xl mx-auto">
+            <div className="space-y-2 sm:space-y-3 lg:space-y-8 text-center lg:text-left">
               <div className="flex justify-center lg:justify-start">
                 <div className="bg-gradient-to-r from-primary/20 to-accent/40 backdrop-blur-sm border border-primary/20 text-primary px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide">
                   ✨ India's #1 Online Fitness Program
                 </div>
               </div>
-              <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-tight">
+              <h1 className="font-heading text-[28px] sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-tight lg:leading-[1.1] tracking-tight">
                 Transform Your
-                <span className="block text-primary mt-2">
+                <span className="block text-primary mt-1">
                   Body & Mind
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-foreground/70 max-w-xl leading-relaxed mx-auto lg:mx-0">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-xl leading-relaxed mx-auto lg:mx-0">
                 Expert-led online fitness programs designed exclusively for women. Train anytime, anywhere.
               </p>
-              <div className="flex flex-wrap gap-5 pt-4 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-3 lg:gap-5 justify-center lg:justify-start">
                 <Button 
                   onClick={openWhatsApp} 
-                  size="lg" 
-                  className="rounded-full text-base px-10 py-7 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
+                  size="default"
+                  className="rounded-full text-sm lg:text-base px-6 py-3 lg:px-10 lg:py-7 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all"
                   data-testid="button-book-consultation-hero"
                 >
-                  <MessageCircle className="h-5 w-5 mr-2" />
+                  <MessageCircle className="h-4 w-4 mr-2" />
                   Start Your Journey
                 </Button>
                 <Button 
                   variant="outline" 
-                  size="lg" 
-                  className="rounded-full text-base px-10 py-7 border-2 hover:bg-primary/5"
+                  size="default"
+                  className="rounded-full text-sm lg:text-base px-6 py-3 lg:px-10 lg:py-7 border-2 hover:bg-primary/5"
                   onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                   data-testid="button-view-packages"
                 >
@@ -291,29 +291,29 @@ export default function Home() {
                 href={GOOGLE_REVIEWS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-wrap items-center gap-4 md:gap-8 pt-6 justify-center lg:justify-start bg-gradient-to-r from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 px-6 py-4 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer group border border-primary/10 hover:border-primary/30"
+                className="flex flex-wrap items-center gap-1.5 sm:gap-2 md:gap-4 lg:gap-8 justify-center lg:justify-start bg-gradient-to-r from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 px-3 py-1 sm:px-4 sm:py-2 lg:px-6 lg:py-4 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer group border border-primary/10 hover:border-primary/30"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1.5">
                   <div className="flex group-hover:scale-110 transition-transform duration-300">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+                      <Star key={i} className="max-[360px]:h-3 max-[360px]:w-3 h-4 w-4 lg:h-5 lg:w-5 fill-primary text-primary" />
                     ))}
                   </div>
-                  <span className="text-base font-semibold">4.8/5.0</span>
+                  <span className="max-[360px]:text-xs text-sm lg:text-base font-semibold">4.8/5.0</span>
                 </div>
-                <div className="h-8 w-px bg-border hidden md:block" />
-                <div className="text-base font-semibold">
-                  <span className="text-primary font-bold">1000+</span> Success Stories
+                <div className="h-4 w-px bg-border hidden md:block" />
+                <div className="max-[360px]:text-xs text-sm lg:text-base font-semibold">
+                  <span className="text-primary font-bold">1000+</span> Success
                 </div>
-                <div className="ml-2 text-xs text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
-                  <span>View Reviews</span>
+                <div className="max-[360px]:hidden text-xs text-muted-foreground group-hover:text-primary transition-colors flex items-center gap-1">
+                  <span className="hidden sm:inline">View Reviews</span>
                   <TrendingUp className="h-3 w-3" />
                 </div>
               </a>
             </div>
-            <div className="relative lg:h-[600px]">
+            <div className="relative max-[360px]:hidden h-44 sm:h-60 lg:h-[500px] w-full">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-3xl" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-primary/20">
+              <div className="relative h-full rounded-3xl overflow-hidden shadow-2xl shadow-primary/20">
                 <img 
                   src={heroImage} 
                   alt="Woman doing fitness workout" 
@@ -596,8 +596,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
               <span className="bg-gradient-to-r from-primary/20 to-accent/30 text-primary px-4 py-2 rounded-full text-sm font-semibold border border-primary/20">
-                <DollarSign className="inline h-3 w-3 mr-1" />
-                Flexible Pricing
+                💰 Flexible Pricing
               </span>
             </div>
             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
