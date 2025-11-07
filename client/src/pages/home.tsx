@@ -214,7 +214,7 @@ export default function Home() {
                 <DialogHeader>
                   <DialogTitle>Call Us Now</DialogTitle>
                   <DialogDescription>
-                    Click the button below to call us directly
+                    Click the button below to call us directly and speak with our fitness experts
                   </DialogDescription>
                 </DialogHeader>
                 <div className="flex flex-col items-center gap-4 py-4">
@@ -340,7 +340,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/20 relative overflow-hidden" id="contact">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-primary/5 via-background to-accent/20 relative overflow-hidden" id="contact">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_70%)]" />
         <div className="container px-4 md:px-6 relative">
           <div className="max-w-4xl mx-auto">
@@ -449,7 +449,7 @@ export default function Home() {
       </section>
 
       {/* Transformation Gallery */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background via-primary/5 to-background" id="transformations">
+      <section className="py-10 md:py-12 bg-gradient-to-b from-background via-primary/5 to-background" id="transformations">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-16">
             <div className="inline-block mb-4">
@@ -494,7 +494,7 @@ export default function Home() {
       </section>
 
       {/* Program Details */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/10 relative overflow-hidden" id="program">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-primary/5 to-accent/10 relative overflow-hidden" id="program">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.08),transparent_60%)]" />
         <div className="container px-4 md:px-6 relative">
           <div className="max-w-4xl mx-auto text-center mb-12">
@@ -543,66 +543,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 md:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-              Why Choose Us
-            </h2>
-            <p className="text-xl text-foreground/60">Your wellness journey, reimagined</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <Card className="p-8 hover-elevate border-primary/10 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all bg-gradient-to-br from-background to-accent/10">
-              <CardContent className="p-0 space-y-5">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/30 flex items-center justify-center">
-                  <Heart className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold">Kindness</h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  Supportive environment that celebrates your progress
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-8 hover-elevate border-primary/10 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all bg-gradient-to-br from-background to-accent/10">
-              <CardContent className="p-0 space-y-5">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/30 flex items-center justify-center">
-                  <Smile className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold">Emotional Wellness</h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  Mental health focus with holistic fitness approach
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-8 hover-elevate border-primary/10 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all bg-gradient-to-br from-background to-accent/10">
-              <CardContent className="p-0 space-y-5">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/30 flex items-center justify-center">
-                  <Palette className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold">Creativity</h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  Diverse workouts that keep you engaged and motivated
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-8 hover-elevate border-primary/10 shadow-lg shadow-primary/5 hover:shadow-xl hover:shadow-primary/10 transition-all bg-gradient-to-br from-background to-accent/10">
-              <CardContent className="p-0 space-y-5">
-                <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/30 flex items-center justify-center">
-                  <Lightbulb className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="font-heading text-2xl font-bold">Innovation</h3>
-                <p className="text-foreground/70 leading-relaxed">
-                  Latest methods for peak performance and health
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Training Types */}
-      <section className="py-24 md:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/20 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-primary/5 via-background to-accent/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(59,130,246,0.05),transparent_50%)]" />
         <div className="container px-4 md:px-6 relative">
           <div className="text-center mb-16">
@@ -648,7 +590,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Packages */}
-      <section className="py-24 md:py-32 relative overflow-hidden" id="pricing">
+      <section className="py-12 md:py-16 relative overflow-hidden" id="pricing">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         <div className="container px-4 md:px-6 relative">
           <div className="text-center mb-16">
@@ -746,7 +688,7 @@ export default function Home() {
       </section>
 
       {/* Meet Trainers */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/10" id="trainers">
+      <section className="py-10 md:py-12 bg-gradient-to-br from-primary/5 to-accent/10" id="trainers">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -793,7 +735,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary text-primary-foreground">
+      <section className="py-10 md:py-12 bg-primary text-primary-foreground">
         <div className="container px-4 md:px-6 text-center">
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Your Best Self Is Waiting — Start Today
@@ -875,33 +817,36 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Floating Action Buttons - Mobile */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 lg:hidden">
+      {/* Floating Action Buttons - Glassmorphic Design */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4 lg:hidden">
         <button
           onClick={() => setCallDialogOpen(true)}
-          className="h-14 w-14 rounded-full bg-primary text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+          className="group relative h-16 w-16 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-white shadow-2xl shadow-primary/40 hover:shadow-primary/60 hover:scale-110 transition-all duration-300 flex items-center justify-center backdrop-blur-xl border border-white/20"
           aria-label="Call Us"
         >
-          <Phone className="h-6 w-6" />
+          <div className="absolute inset-0 bg-white/20 rounded-2xl blur-xl group-hover:bg-white/30 transition-all" />
+          <Phone className="h-6 w-6 relative z-10 animate-pulse" />
         </button>
         <button
           onClick={openWhatsApp}
-          className="h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform flex items-center justify-center animate-pulse"
+          className="group relative h-16 w-16 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#1ea952] text-white shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 hover:scale-110 transition-all duration-300 flex items-center justify-center backdrop-blur-xl border border-white/20 animate-bounce"
           data-testid="button-whatsapp-float"
           aria-label="Contact on WhatsApp"
         >
-          <SiWhatsapp className="h-7 w-7" />
+          <div className="absolute inset-0 bg-white/20 rounded-2xl blur-xl group-hover:bg-white/30 transition-all" />
+          <SiWhatsapp className="h-7 w-7 relative z-10" />
         </button>
       </div>
       
-      {/* Floating WhatsApp Button - Desktop */}
+      {/* Floating WhatsApp Button - Desktop Glassmorphic */}
       <button
         onClick={openWhatsApp}
-        className="hidden lg:flex fixed bottom-8 right-8 z-50 h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform items-center justify-center animate-pulse"
+        className="group hidden lg:flex fixed bottom-8 right-8 z-50 h-16 w-16 rounded-2xl bg-gradient-to-br from-[#25D366] to-[#1ea952] text-white shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 hover:scale-110 transition-all duration-300 items-center justify-center backdrop-blur-xl border border-white/20 animate-bounce"
         data-testid="button-whatsapp-float-desktop"
         aria-label="Contact on WhatsApp"
       >
-        <SiWhatsapp className="h-7 w-7" />
+        <div className="absolute inset-0 bg-white/20 rounded-2xl blur-xl group-hover:bg-white/30 transition-all" />
+        <SiWhatsapp className="h-7 w-7 relative z-10" />
       </button>
     </div>
   );
