@@ -43,6 +43,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import transformationImage from "@assets/generated_images/Transformation_before_after_results_1ed81a38.png";
 import workoutVideo from "@assets/5319089-uhd_3840_2160_25fps_1762541494599.mp4";
+import heroVideo from "@assets/hero-video.mp4";
 import onlineClassImage from "@assets/generated_images/Online_fitness_class_women_c03f2b22.png";
 import trainer1Image from "@assets/stock_images/indian_female_fitnes_26f1d39f.jpg";
 import trainer2Image from "@assets/generated_images/Zumba_instructor_dancing_portrait_1640c3fe.png";
@@ -113,7 +114,7 @@ export default function Home() {
             <div className="h-12 w-12 rounded-lg overflow-hidden shadow-md">
               <img src={gymLogo} alt="HOC Fitness" className="h-full w-full object-cover" />
             </div>
-            <span className="font-heading text-xl md:text-2xl font-bold text-white">
+            <span className="font-heading text-xl md:text-2xl font-bold text-foreground">
               HOC Fitness
             </span>
           </div>
@@ -129,37 +130,37 @@ export default function Home() {
               <nav className="flex flex-col gap-6 mt-8">
                 <button 
                   onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMobileMenuOpen(false); }}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                 >
                   HOME
                 </button>
                 <button 
                   onClick={() => { document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                 >
                   PROGRAM
                 </button>
                 <button 
                   onClick={() => { document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                 >
                   PRICING
                 </button>
                 <button 
                   onClick={() => { document.getElementById('trainers')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                 >
                   TRAINERS
                 </button>
                 <button 
                   onClick={() => { document.getElementById('transformations')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                 >
                   BEFORE & AFTER
                 </button>
                 <button 
                   onClick={() => { document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); setMobileMenuOpen(false); }}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="text-lg font-medium text-foreground hover:text-primary transition-colors text-left"
                 >
                   CONTACT
                 </button>
@@ -171,37 +172,37 @@ export default function Home() {
           <nav className="hidden lg:flex items-center gap-6">
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-foreground hover:text-primary transition-colors"
             >
               HOME
             </button>
             <button 
               onClick={() => document.getElementById('program')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-foreground hover:text-primary transition-colors"
             >
               PROGRAM
             </button>
             <button 
               onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-foreground hover:text-primary transition-colors"
             >
               PRICING
             </button>
             <button 
               onClick={() => document.getElementById('trainers')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-foreground hover:text-primary transition-colors"
             >
               TRAINERS
             </button>
             <button 
               onClick={() => document.getElementById('transformations')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-foreground hover:text-primary transition-colors"
             >
               BEFORE & AFTER
             </button>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-xs font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-xs font-medium text-foreground hover:text-primary transition-colors"
             >
               CONTACT
             </button>
@@ -251,7 +252,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+      <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden bg-gradient-to-br from-primary/5 via-white to-accent/10">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full">
           <video 
@@ -259,31 +260,31 @@ export default function Home() {
             loop 
             muted 
             playsInline
-            className="w-full h-full object-cover object-[65%_center] md:object-[75%_center]"
+            className="w-full h-full object-cover opacity-30"
           >
-            <source src="https://videos.pexels.com/video-files/6980760/6980760-uhd_2732_1440_30fps.mp4" type="video/mp4" />
+            <source src={heroVideo} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/65 to-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/30 to-transparent" />
         </div>
         
         {/* Content */}
         <div className="container py-6 md:py-10 lg:py-16 relative z-10 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center lg:text-left">
             <div className="space-y-4 md:space-y-5 lg:space-y-6">
-              <h1 className="font-heading font-bold leading-[1.15] tracking-tight text-white" style={{ fontSize: 'clamp(1.75rem, 6vw, 3.5rem)' }}>
+              <h1 className="font-heading font-bold leading-[1.15] tracking-tight text-foreground drop-shadow-sm" style={{ fontSize: 'clamp(1.75rem, 6vw, 3.5rem)' }}>
                 Transform Your
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-accent mt-1">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/80 mt-1 drop-shadow-none">
                   Body & Mind
                 </span>
               </h1>
-              <p className="text-white/90 leading-relaxed mx-auto lg:mx-0 max-w-lg" style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.125rem)' }}>
+              <p className="text-foreground/80 leading-relaxed mx-auto lg:mx-0 max-w-lg font-medium" style={{ fontSize: 'clamp(0.95rem, 1.8vw, 1.125rem)' }}>
                 Expert-led online fitness programs designed exclusively for women. Train anytime, anywhere.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2">
                 <Button 
                   onClick={openWhatsApp} 
                   size="lg"
-                  className="rounded-full px-6 py-5 md:px-8 md:py-6 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all hover:scale-105 bg-gradient-to-r from-primary to-primary/90 font-semibold text-sm md:text-base"
+                  className="rounded-full px-6 py-5 md:px-8 md:py-6 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all hover:scale-105 bg-primary hover:bg-primary/90 font-semibold text-sm md:text-base"
                   data-testid="button-book-consultation-hero"
                 >
                   <MessageCircle className="h-4 w-4 md:h-5 md:w-5 mr-2" />
@@ -292,7 +293,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="rounded-full px-6 py-5 md:px-8 md:py-6 border-2 border-white/50 hover:bg-white/10 hover:border-white transition-all hover:scale-105 font-semibold text-sm md:text-base text-white"
+                  className="rounded-full px-6 py-5 md:px-8 md:py-6 border-2 border-foreground/20 hover:bg-primary/10 hover:border-primary transition-all hover:scale-105 font-semibold text-sm md:text-base text-foreground"
                   onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                   data-testid="button-view-packages"
                 >
@@ -303,7 +304,7 @@ export default function Home() {
                 href={GOOGLE_REVIEWS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex flex-wrap items-center gap-2 md:gap-3 lg:gap-5 justify-center lg:justify-start bg-white/10 hover:bg-white/20 backdrop-blur-sm px-4 py-2 md:px-5 md:py-2.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer group border border-white/20 hover:border-white/30"
+                className="inline-flex flex-wrap items-center gap-2 md:gap-3 lg:gap-5 justify-center lg:justify-start bg-white/80 hover:bg-white backdrop-blur-sm px-4 py-2 md:px-5 md:py-2.5 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 cursor-pointer group border border-border hover:border-primary/30"
               >
                 <div className="flex items-center gap-1.5">
                   <div className="flex group-hover:scale-110 transition-transform duration-300">
@@ -311,13 +312,13 @@ export default function Home() {
                       <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
-                  <span className="text-sm font-bold text-white">4.8/5.0</span>
+                  <span className="text-sm font-bold text-foreground">4.8/5.0</span>
                 </div>
-                <div className="h-4 w-px bg-white/30 hidden sm:block" />
-                <div className="text-sm font-bold text-white">
+                <div className="h-4 w-px bg-border hidden sm:block" />
+                <div className="text-sm font-bold text-foreground">
                   <span className="text-primary font-bold">1000+</span> Success Stories
                 </div>
-                <div className="hidden sm:flex text-xs text-white/80 group-hover:text-white transition-colors items-center gap-1">
+                <div className="hidden sm:flex text-xs text-foreground/70 group-hover:text-foreground transition-colors items-center gap-1">
                   <span>View Reviews</span>
                   <TrendingUp className="h-3 w-3" />
                 </div>
