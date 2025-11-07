@@ -282,16 +282,16 @@ export default function Home() {
                 <Button 
                   onClick={openWhatsApp} 
                   size="default"
-                  className="w-full sm:w-auto rounded-full px-5 py-2.5 md:px-8 md:py-6 transition-all hover:scale-105 bg-primary hover:bg-primary/90 font-semibold text-xs md:text-base"
+                  className="rounded-full px-6 py-3 md:px-8 md:py-6 transition-all hover:scale-105 bg-primary hover:bg-primary/90 font-semibold text-sm md:text-base"
                   data-testid="button-book-consultation-hero"
                 >
-                  <MessageCircle className="h-3.5 w-3.5 md:h-5 md:w-5 mr-2" />
+                  <MessageCircle className="h-4 w-4 md:h-5 md:w-5 mr-2" />
                   Start Your Journey
                 </Button>
                 <Button 
                   variant="outline" 
                   size="default"
-                  className="w-full sm:w-auto rounded-full px-5 py-2.5 md:px-8 md:py-6 border-2 border-white bg-white/95 hover:bg-white hover:border-white transition-all hover:scale-105 font-semibold text-xs md:text-base text-foreground"
+                  className="rounded-full px-6 py-3 md:px-8 md:py-6 border-2 border-white bg-white/95 hover:bg-white hover:border-white transition-all hover:scale-105 font-semibold text-sm md:text-base text-foreground"
                   onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                   data-testid="button-view-packages"
                 >
@@ -497,49 +497,55 @@ export default function Home() {
       </section>
 
       {/* Program Details */}
-      <section className="py-6 md:py-8 bg-gradient-to-br from-primary/5 to-accent/10 relative overflow-hidden" id="program">
+      <section className="py-8 md:py-12 bg-gradient-to-br from-primary/5 to-accent/10 relative overflow-hidden" id="program">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.08),transparent_60%)]" />
         <div className="container px-4 md:px-6 relative">
-          <div className="max-w-4xl mx-auto text-center mb-8">
-            <div className="inline-block mb-6">
-              <span className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-primary/30">
-                Exclusively For Women
-              </span>
-            </div>
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Only Designed For Ladies
-            </h2>
-            <h3 className="font-heading text-2xl md:text-3xl font-semibold text-primary mb-6">
-              Start your weight loss journey with HOC FITNESS
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We conduct Online LIVE Fitness Classes Daily: ZUMBA, Yoga, Aerobics, Weight Loss Program, HIIT, Cardio, TONE UP & More.
-            </p>
-            <div className="bg-card p-8 md:p-10 rounded-3xl border-2 border-primary/20 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 backdrop-blur">
-              <div className="mb-6">
-                <Activity className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h4 className="font-heading text-2xl font-bold mb-2">Flexible Time Slots</h4>
-                <p className="text-sm text-muted-foreground">Choose what works best for your schedule</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-block mb-4">
+                <span className="bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-primary/30">
+                  Exclusively For Women
+                </span>
               </div>
-              <div className="space-y-4 text-left max-w-2xl mx-auto">
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors">
-                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0" />
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Only Designed For Ladies
+              </h2>
+              <h3 className="font-heading text-xl md:text-2xl lg:text-3xl font-semibold text-primary mb-6">
+                Start your weight loss journey with HOC FITNESS
+              </h3>
+            </div>
+            
+            <div className="bg-card p-6 md:p-10 rounded-3xl border-2 border-primary/20 shadow-xl shadow-primary/10 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500">
+              <p className="text-center text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
+                We conduct Online LIVE Fitness Classes Daily: ZUMBA, Yoga, Aerobics, Weight Loss Program, HIIT, Cardio, TONE UP & More.
+              </p>
+              
+              <div className="mb-6 text-center">
+                <Activity className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h4 className="font-heading text-2xl md:text-3xl font-bold mb-2">Flexible Time Slots</h4>
+                <p className="text-sm md:text-base text-muted-foreground">Choose what works best for your schedule</p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-4 mb-6 max-w-4xl mx-auto">
+                <div className="flex items-start gap-3 p-5 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors border border-primary/10">
+                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-foreground">Morning Sessions:</span>
-                    <span className="text-muted-foreground ml-2">5:45AM - 7AM - 8AM - 11AM</span>
+                    <span className="font-bold text-foreground block mb-1">Morning Sessions</span>
+                    <span className="text-muted-foreground text-sm md:text-base">5:45AM - 7AM - 8AM - 11AM</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors">
-                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0" />
+                <div className="flex items-start gap-3 p-5 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors border border-primary/10">
+                  <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-foreground">Evening Sessions:</span>
-                    <span className="text-muted-foreground ml-2">6PM - 7:30PM</span>
+                    <span className="font-bold text-foreground block mb-1">Evening Sessions</span>
+                    <span className="text-muted-foreground text-sm md:text-base">6PM - 7:30PM</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 p-4 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30">
-                  <Zap className="h-6 w-6 text-primary flex-shrink-0 animate-pulse" />
-                  <span className="text-primary font-bold text-lg">You can join Any-class, Any-Time, Any-Day</span>
-                </div>
+              </div>
+              
+              <div className="flex items-center justify-center gap-3 p-5 md:p-6 rounded-2xl bg-gradient-to-r from-primary/20 to-accent/20 border-2 border-primary/30 max-w-3xl mx-auto">
+                <Zap className="h-7 w-7 md:h-8 md:w-8 text-primary flex-shrink-0 animate-pulse" />
+                <span className="text-primary font-bold text-base md:text-xl">You can join Any-class, Any-Time, Any-Day</span>
               </div>
             </div>
           </div>
