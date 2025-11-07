@@ -292,7 +292,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="rounded-full px-6 py-5 md:px-8 md:py-6 border-2 border-foreground/20 hover:bg-primary/10 hover:border-primary transition-all hover:scale-105 font-semibold text-sm md:text-base text-foreground"
+                  className="rounded-full px-6 py-5 md:px-8 md:py-6 border-2 border-white/70 bg-white/90 hover:bg-white hover:border-white transition-all hover:scale-105 font-semibold text-sm md:text-base text-foreground shadow-md"
                   onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                   data-testid="button-view-packages"
                 >
@@ -833,16 +833,56 @@ export default function Home() {
       </footer>
 
       {/* Floating Contact Icon - All Screens */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <button
-          onClick={openWhatsApp}
-          className="group relative h-16 w-16 rounded-full bg-slate-800 hover:bg-slate-700 text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
-          aria-label="Contact on WhatsApp"
-          data-testid="button-floating-contact"
-        >
-          <MessageCircle className="h-7 w-7" />
-        </button>
-      </div>
+      <Sheet open={contactMenuOpen} onOpenChange={setContactMenuOpen}>
+        <SheetTrigger asChild>
+          <div className="fixed bottom-8 right-8 z-50">
+            <button
+              className="group relative h-16 w-16 rounded-full bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
+              aria-label="Contact Us"
+              data-testid="button-floating-contact"
+            >
+              <MessageCircle className="h-7 w-7" />
+            </button>
+          </div>
+        </SheetTrigger>
+        <SheetContent side="bottom" className="h-auto rounded-t-3xl">
+          <div className="py-6 space-y-6">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-2">Contact Us</h3>
+              <p className="text-muted-foreground">Choose your preferred contact method</p>
+            </div>
+            
+            <div className="grid gap-4">
+              <Button
+                onClick={() => {
+                  openWhatsApp();
+                  setContactMenuOpen(false);
+                }}
+                size="lg"
+                className="h-16 text-lg bg-primary hover:bg-primary/90"
+                data-testid="button-contact-whatsapp"
+              >
+                <SiWhatsapp className="h-6 w-6 mr-3" />
+                WhatsApp
+              </Button>
+              
+              <Button
+                onClick={() => {
+                  window.location.href = `tel:${PHONE_NUMBER}`;
+                  setContactMenuOpen(false);
+                }}
+                variant="outline"
+                size="lg"
+                className="h-16 text-lg border-2"
+                data-testid="button-contact-call"
+              >
+                <Phone className="h-6 w-6 mr-3" />
+                Call Now
+              </Button>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
     </div>
   );
 }
