@@ -96,8 +96,8 @@ export default function Home() {
             <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center">
               <Dumbbell className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="font-heading text-2xl font-bold bg-gradient-to-r from-primary to-[#c026d3] bg-clip-text text-transparent">
-              Bliss & Burn
+            <span className="font-heading text-2xl font-bold text-primary">
+              Hoc Fitness
             </span>
           </div>
           
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
               <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-tight">
                 Transform Your
-                <span className="block bg-gradient-to-r from-primary via-[#d946ef] to-[#c026d3] bg-clip-text text-transparent mt-2">
+                <span className="block text-primary mt-2">
                   Body & Mind
                 </span>
               </h1>
@@ -335,7 +335,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-primary to-[#c026d3] bg-clip-text text-transparent">
+              <span className="text-primary">
                 Shape Your Body
               </span>
             </h2>
@@ -368,7 +368,7 @@ export default function Home() {
               Only Designed For Ladies
             </h2>
             <h3 className="font-heading text-2xl md:text-3xl font-semibold text-primary mb-6">
-              Start your weight loss journey with BLISS & BURN
+              Start your weight loss journey with HOC FITNESS
             </h3>
             <p className="text-lg text-muted-foreground mb-6">
               We conduct Online LIVE Fitness Classes Daily: ZUMBA, Yoga, Aerobics, Weight Loss Program, HIIT, Cardio, TONE UP & More.
