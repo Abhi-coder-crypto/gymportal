@@ -41,8 +41,8 @@ import {
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import heroImage from "@assets/stock_images/indian_woman_fitness_ac12c042.jpg";
 import transformationImage from "@assets/generated_images/Transformation_before_after_results_1ed81a38.png";
+import workoutVideo from "@assets/5319089-uhd_3840_2160_25fps_1762541494599.mp4";
 import onlineClassImage from "@assets/generated_images/Online_fitness_class_women_c03f2b22.png";
 import trainer1Image from "@assets/stock_images/indian_female_fitnes_26f1d39f.jpg";
 import trainer2Image from "@assets/generated_images/Zumba_instructor_dancing_portrait_1640c3fe.png";
@@ -252,12 +252,18 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
-        {/* Animated Gradient Background */}
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-gradient">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={workoutVideo} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/50" />
         </div>
         
         {/* Content */}
@@ -796,32 +802,8 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Sticky Bottom WhatsApp Banner - Mobile Only */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-primary via-primary to-primary/90 border-t-2 border-primary/20 shadow-2xl backdrop-blur-sm">
-        <div className="container px-4 py-3">
-          <div className="flex items-center gap-2">
-            <Button 
-              onClick={openWhatsApp}
-              className="flex-1 bg-white hover:bg-slate-50 text-primary rounded-full py-6 font-bold shadow-lg"
-              data-testid="button-sticky-whatsapp"
-            >
-              <SiWhatsapp className="h-5 w-5 mr-2" />
-              WhatsApp Us
-            </Button>
-            <Button 
-              onClick={() => setCallDialogOpen(true)}
-              variant="outline"
-              className="px-6 py-6 bg-primary-foreground/10 hover:bg-primary-foreground/20 border-white/30 text-white rounded-full"
-              data-testid="button-sticky-call"
-            >
-              <Phone className="h-5 w-5" />
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating Contact Icon - Desktop Only */}
-      <div className="hidden lg:block fixed bottom-8 right-8 z-50">
+      {/* Floating Contact Icon - All Screens */}
+      <div className="fixed bottom-8 right-8 z-50">
         <button
           onClick={openWhatsApp}
           className="group relative h-16 w-16 rounded-full bg-slate-800 hover:bg-slate-700 text-white shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
