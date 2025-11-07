@@ -256,7 +256,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(37,99,235,0.12),transparent_50%)]" />
         <div className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,transparent,rgba(59,130,246,0.05),transparent)]" />
         <div className="container py-6 md:py-10 lg:py-16 relative px-4 md:px-6">
-          <div className="grid lg:grid-cols-[1.1fr,0.9fr] gap-6 lg:gap-10 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-[1.1fr,0.9fr] gap-4 lg:gap-6 items-center max-w-5xl mx-auto">
             <div className="space-y-4 md:space-y-5 lg:space-y-6 text-center lg:text-left">
               <h1 className="font-heading font-bold leading-[1.15] tracking-tight" style={{ fontSize: 'clamp(1.75rem, 6vw, 3.5rem)' }}>
                 Transform Your
@@ -558,7 +558,7 @@ export default function Home() {
             </h2>
             <p className="text-foreground/60 max-w-2xl mx-auto" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.125rem)' }}>Comprehensive programs for every fitness level and goal</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {[
               { image: cardioImage, title: "Cardio Core", desc: "High-energy workouts that elevate your heart rate, boost endurance, and burn calories effectively.", icon: Flame },
               { image: functionalImage, title: "Functional Training", desc: "Improve daily performance, reduce injury risk, and enhance flexibility with practical movements.", icon: Target },
@@ -568,7 +568,7 @@ export default function Home() {
               { image: zumbaImage, title: "Zumba / Aerobics", desc: "Fun cardio dance workouts that keep you active, energized, and engaged.", icon: Zap },
             ].map((item, i) => (
               <Card key={i} className="group overflow-hidden hover-elevate border-slate-200 shadow-md hover:shadow-xl transition-all duration-500 bg-white hover:border-slate-300">
-                <div className="relative h-40 md:h-48 w-full overflow-hidden">
+                <div className="relative h-32 md:h-40 w-full overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
                   <img 
                     src={item.image} 
@@ -576,8 +576,8 @@ export default function Home() {
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                 </div>
-                <CardContent className="p-4 md:p-5 space-y-2">
-                  <h3 className="font-heading text-lg md:text-xl font-bold text-slate-800 group-hover:text-slate-600 transition-colors">{item.title}</h3>
+                <CardContent className="p-3 md:p-4 space-y-1.5">
+                  <h3 className="font-heading text-base md:text-lg font-bold text-slate-800 group-hover:text-slate-600 transition-colors">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed text-xs md:text-sm">{item.desc}</p>
                 </CardContent>
               </Card>
@@ -601,7 +601,7 @@ export default function Home() {
             </h2>
             <p className="text-xl text-foreground/60 max-w-2xl mx-auto">Flexible plans designed for your success and transformation journey</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 max-w-5xl mx-auto">
             {[
               {
                 name: "1 Month",
@@ -643,33 +643,33 @@ export default function Home() {
                 ]
               },
             ].map((pkg, i) => (
-              <Card key={i} className={`group p-10 hover-elevate transition-all duration-500 ${pkg.featured ? 'border-primary border-2 shadow-2xl shadow-primary/25 scale-105 hover:scale-110' : 'border-primary/10 shadow-lg shadow-primary/5 hover:shadow-2xl hover:shadow-primary/15'} bg-gradient-to-br from-background to-accent/5 hover:border-primary/30 relative overflow-hidden`}>
+              <Card key={i} className={`group p-6 md:p-7 hover-elevate transition-all duration-500 ${pkg.featured ? 'border-primary border-2 shadow-xl shadow-primary/20 bg-gradient-to-br from-primary/5 to-accent/5' : 'border-primary/10 shadow-lg shadow-primary/5 bg-gradient-to-br from-background to-accent/5'} hover:shadow-xl hover:shadow-primary/20 hover:border-primary/30 relative overflow-hidden`}>
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent ${pkg.featured ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500`} />
-                <CardContent className="p-0 space-y-8">
+                <CardContent className="p-0 space-y-5 md:space-y-6">
                   {pkg.featured && (
-                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/90 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg shadow-primary/30 animate-pulse">
-                      <Star className="h-4 w-4 fill-white" />
+                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/90 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-md shadow-primary/30">
+                      <Star className="h-3.5 w-3.5 fill-white" />
                       Most Popular
                     </div>
                   )}
                   <div>
-                    <h3 className="font-heading text-3xl font-bold mb-3 group-hover:text-primary transition-colors">{pkg.name}</h3>
-                    <p className="text-foreground/60 font-medium text-lg">{pkg.classes}</p>
+                    <h3 className="font-heading text-xl md:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{pkg.name}</h3>
+                    <p className="text-foreground/60 font-medium text-sm md:text-base">{pkg.classes}</p>
                   </div>
-                  <div className="font-heading text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <div className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     {pkg.price}
                   </div>
-                  <ul className="space-y-4">
+                  <ul className="space-y-2.5 md:space-y-3">
                     {pkg.features.map((feature, j) => (
-                      <li key={j} className="flex items-start gap-3 group/item">
-                        <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
-                        <span className="text-base text-foreground/80 leading-relaxed">{feature}</span>
+                      <li key={j} className="flex items-start gap-2.5 group/item">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
+                        <span className="text-sm md:text-base text-foreground/80 leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button 
                     onClick={openWhatsApp} 
-                    className={`w-full rounded-full py-6 text-base font-semibold transition-all duration-300 ${pkg.featured ? 'shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40' : 'hover:bg-primary hover:text-primary-foreground'}`}
+                    className={`w-full rounded-full py-5 text-sm md:text-base font-semibold transition-all duration-300 ${pkg.featured ? 'shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40' : 'hover:bg-primary hover:text-primary-foreground'}`}
                     variant={pkg.featured ? "default" : "outline"}
                     data-testid={`button-select-${pkg.name.toLowerCase().replace(' ', '-')}`}
                   >
@@ -684,21 +684,21 @@ export default function Home() {
       </section>
 
       {/* Meet Trainers */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 relative overflow-hidden" id="trainers">
+      <section className="py-8 md:py-10 lg:py-12 bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 relative overflow-hidden" id="trainers">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]" />
-        <div className="container px-4 md:px-6 relative">
-          <div className="text-center mb-12">
-            <div className="inline-block mb-4">
-              <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg shadow-primary/30">
+        <div className="container px-4 md:px-6 relative max-w-5xl mx-auto">
+          <div className="text-center mb-6 md:mb-8">
+            <div className="inline-block mb-3 md:mb-4">
+              <span className="bg-gradient-to-r from-primary to-accent text-primary-foreground px-5 py-1.5 rounded-full text-xs md:text-sm font-bold shadow-lg shadow-primary/30">
                 Expert Team
               </span>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+            <h2 className="font-heading font-bold mb-3 md:mb-4 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text" style={{ fontSize: 'clamp(1.75rem, 5vw, 3rem)' }}>
               Meet Your Trainers
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Certified professionals dedicated to transforming your fitness journey</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto" style={{ fontSize: 'clamp(0.95rem, 2vw, 1.125rem)' }}>Certified professionals dedicated to transforming your fitness journey</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {[
               {
                 name: "Snata Pattnaik",
@@ -719,19 +719,19 @@ export default function Home() {
                 bio: "Passionate about health and helping people achieve their fitness goals through strength training and weight loss programs."
               },
             ].map((trainer, i) => (
-              <Card key={i} className="group p-8 hover-elevate bg-card/50 backdrop-blur border-2 border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20">
-                <CardContent className="p-0 space-y-6 text-center">
-                  <div className="relative w-40 h-40 mx-auto">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500" />
-                    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-500 shadow-xl">
+              <Card key={i} className="group p-5 md:p-6 hover-elevate bg-card/50 backdrop-blur border-2 border-primary/10 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/15">
+                <CardContent className="p-0 space-y-4 text-center">
+                  <div className="relative w-28 h-28 md:w-32 md:h-32 mx-auto">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-lg group-hover:blur-xl transition-all duration-500" />
+                    <div className="relative w-full h-full rounded-full overflow-hidden border-3 border-primary/20 group-hover:border-primary/40 transition-all duration-500 shadow-lg">
                       <img src={trainer.image} alt={trainer.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-heading text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{trainer.name}</h3>
-                    <p className="text-base text-primary font-bold bg-primary/10 px-4 py-2 rounded-full inline-block">{trainer.role}</p>
+                    <h3 className="font-heading text-lg md:text-xl font-bold mb-1.5 group-hover:text-primary transition-colors">{trainer.name}</h3>
+                    <p className="text-xs md:text-sm text-primary font-bold bg-primary/10 px-3 py-1.5 rounded-full inline-block">{trainer.role}</p>
                   </div>
-                  <p className="text-base text-muted-foreground leading-relaxed">{trainer.bio}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{trainer.bio}</p>
                 </CardContent>
               </Card>
             ))}
