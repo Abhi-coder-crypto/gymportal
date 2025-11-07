@@ -30,7 +30,12 @@ import {
   Facebook,
   Instagram,
   Youtube,
-  Loader2
+  Loader2,
+  Home as HomeIcon,
+  Info,
+  DollarSign,
+  MessageSquare,
+  TrendingUp
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import heroImage from "@assets/generated_images/Hero_fitness_workout_woman_6806a3a8.png";
@@ -95,6 +100,53 @@ export default function Home() {
               Bliss & Burn
             </span>
           </div>
+          
+          {/* Navigation Menu */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <HomeIcon className="h-4 w-4" />
+              HOME
+            </button>
+            <button 
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Info className="h-4 w-4" />
+              ABOUT US
+            </button>
+            <button 
+              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <DollarSign className="h-4 w-4" />
+              PRICING
+            </button>
+            <button 
+              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <MessageSquare className="h-4 w-4" />
+              TESTIMONIALS
+            </button>
+            <button 
+              onClick={() => document.getElementById('transformations')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <TrendingUp className="h-4 w-4" />
+              BEFORE & AFTER
+            </button>
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Mail className="h-4 w-4" />
+              CONTACT
+            </button>
+          </nav>
+          
           <Button onClick={openWhatsApp} size="lg" className="rounded-full" data-testid="button-book-call-header">
             <Phone className="h-4 w-4 mr-2" />
             Book A Free Call
