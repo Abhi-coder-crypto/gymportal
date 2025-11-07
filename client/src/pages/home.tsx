@@ -253,7 +253,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+      <section className="relative w-full min-h-[70vh] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden mt-20">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full bg-neutral-800">
           <video 
@@ -471,7 +471,7 @@ export default function Home() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Real transformations from real women who took the first step towards a healthier lifestyle</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-3 md:gap-5 max-w-sm md:max-w-2xl mx-auto">
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 max-w-6xl mx-auto">
             <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img 
@@ -479,9 +479,9 @@ export default function Home() {
                 alt="Before and after transformation" 
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-white font-semibold text-lg">Amazing Transformation</p>
-                <p className="text-white/80 text-sm">Dedication brings results</p>
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold text-sm md:text-lg">Amazing Transformation</p>
+                <p className="text-white/80 text-xs md:text-sm">Dedication brings results</p>
               </div>
             </div>
             <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
@@ -491,9 +491,33 @@ export default function Home() {
                 alt="Online fitness class" 
                 className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-white font-semibold text-lg">Live Interactive Classes</p>
-                <p className="text-white/80 text-sm">Join from anywhere</p>
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold text-sm md:text-lg">Live Interactive Classes</p>
+                <p className="text-white/80 text-xs md:text-sm">Join from anywhere</p>
+              </div>
+            </div>
+            <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img 
+                src={yogaImage} 
+                alt="Yoga and mindfulness" 
+                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold text-sm md:text-lg">Yoga & Wellness</p>
+                <p className="text-white/80 text-xs md:text-sm">Mind-body harmony</p>
+              </div>
+            </div>
+            <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img 
+                src={zumbaImage} 
+                alt="Zumba dance fitness" 
+                className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold text-sm md:text-lg">Dance & Energy</p>
+                <p className="text-white/80 text-xs md:text-sm">Fun cardio workouts</p>
               </div>
             </div>
           </div>
