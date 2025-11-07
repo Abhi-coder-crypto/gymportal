@@ -328,13 +328,13 @@ export default function Home() {
       </section>
 
       {/* Notice Banner */}
-      <section className="bg-gradient-to-r from-destructive/10 via-destructive/15 to-destructive/10 border-y border-destructive/30 py-5 shadow-inner">
+      <section className="bg-primary/5 border-y border-primary/20 py-5">
         <div className="container px-4 md:px-6">
           <div className="flex items-center justify-center gap-3 max-w-4xl mx-auto">
-            <div className="h-8 w-8 rounded-full bg-destructive/20 flex items-center justify-center flex-shrink-0">
-              <Info className="h-4 w-4 text-destructive" />
+            <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Info className="h-4 w-4 text-primary" />
             </div>
-            <p className="text-center text-sm md:text-base text-destructive font-semibold">
+            <p className="text-center text-sm md:text-base text-primary font-semibold">
               <strong>Important:</strong> We only offer online classes. No offline batches available.
             </p>
           </div>
@@ -783,17 +783,47 @@ export default function Home() {
               <ul className="space-y-3 text-sm">
                 <li className="flex items-start gap-2">
                   <MapPin className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-muted-foreground">Bengaluru, Karnataka</span>
+                  <a 
+                    href="https://www.google.com/maps/place/House+Of+Champions+Gym/@19.2361639,73.1543851,17z/data=!3m1!4b1!4m6!3m5!1s0x3be795049d6e75a1:0xa3bb5dfe6f0afeaa!8m2!3d19.2361639!4d73.15696!16s%2Fg%2F11w18ww9mr?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                  >
+                    Basement, Gangagodavari Apt, below Sundar Classes, Katemanivali, Naka, Kalyan, Maharashtra 421306
+                  </a>
                 </li>
                 <li className="flex items-start gap-2">
                   <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-muted-foreground">+91 8600126395</span>
+                  <a href="tel:+918600126395" className="text-muted-foreground hover:text-primary transition-colors">+91 8600126395</a>
                 </li>
                 <li className="flex items-start gap-2">
                   <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span className="text-muted-foreground">abhijeet18012001@gmail.com</span>
+                  <a href="mailto:abhijeet18012001@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">abhijeet18012001@gmail.com</a>
                 </li>
               </ul>
+              
+              {/* Google Map Card */}
+              <div className="mt-6">
+                <a 
+                  href="https://www.google.com/maps/place/House+Of+Champions+Gym/@19.2361639,73.1543851,17z/data=!3m1!4b1!4m6!3m5!1s0x3be795049d6e75a1:0xa3bb5dfe6f0afeaa!8m2!3d19.2361639!4d73.15696!16s%2Fg%2F11w18ww9mr?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block group"
+                  data-testid="link-google-map"
+                >
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/50 cursor-pointer">
+                    <div className="relative h-40 bg-gradient-to-br from-primary/10 to-primary/5">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center space-y-2">
+                          <MapPin className="h-12 w-12 text-primary mx-auto" />
+                          <p className="text-sm font-semibold text-foreground">View on Google Maps</p>
+                          <p className="text-xs text-muted-foreground">House Of Champions Gym</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                </a>
+              </div>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t text-center text-sm text-muted-foreground">
