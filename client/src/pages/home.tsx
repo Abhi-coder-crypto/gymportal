@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { contactFormSchema, type ContactFormData } from "@shared/schema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { apiRequest } from "@/lib/queryClient";
 import { 
   Heart, 
   Smile, 
@@ -27,7 +29,8 @@ import {
   MapPin,
   Facebook,
   Instagram,
-  Youtube
+  Youtube,
+  Loader2
 } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 import heroImage from "@assets/generated_images/Hero_fitness_workout_woman_6806a3a8.png";
@@ -39,7 +42,6 @@ const WHATSAPP_NUMBER = "918600126395";
 
 export default function Home() {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -51,25 +53,29 @@ export default function Home() {
     },
   });
 
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
-    try {
-      // Will be implemented in backend phase
-      console.log("Form data:", data);
+  const contactMutation = useMutation({
+    mutationFn: async (data: ContactFormData) => {
+      const response = await apiRequest("POST", "/api/contact", data);
+      return response;
+    },
+    onSuccess: (data: any) => {
       toast({
         title: "Thank you!",
-        description: "We'll contact you shortly to discuss your fitness journey.",
+        description: data.message || "We'll contact you shortly to discuss your fitness journey.",
       });
       form.reset();
-    } catch (error) {
+    },
+    onError: (error: any) => {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: error.message || "Something went wrong. Please try again.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
-    }
+    },
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    contactMutation.mutate(data);
   };
 
   const openWhatsApp = () => {
@@ -167,9 +173,8 @@ export default function Home() {
       {/* Notice Banner */}
       <section className="bg-destructive/10 border-y border-destructive/20 py-4">
         <div className="container">
-          <p className="text-center text-sm md:text-base text-destructive font-medium flex items-center justify-center gap-2">
-            <span className="text-xl">⚠️</span>
-            <span>Note: We only offer online classes. No offline batches available.</span>
+          <p className="text-center text-sm md:text-base text-destructive font-medium">
+            <strong>Note:</strong> We only offer online classes. No offline batches available.
           </p>
         </div>
       </section>
@@ -258,10 +263,17 @@ export default function Home() {
                     type="submit" 
                     size="lg" 
                     className="w-full rounded-full text-lg py-6" 
-                    disabled={isSubmitting}
+                    disabled={contactMutation.isPending}
                     data-testid="button-submit-form"
                   >
-                    {isSubmitting ? "Submitting..." : "Submit"}
+                    {contactMutation.isPending ? (
+                      <>
+                        <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Submit"
+                    )}
                   </Button>
                 </form>
               </Form>
