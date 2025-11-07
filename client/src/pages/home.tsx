@@ -249,7 +249,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
+      <section className="relative w-full min-h-[70vh] md:min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 w-full h-full bg-neutral-800">
           <video 
@@ -259,7 +259,7 @@ export default function Home() {
             playsInline
             preload="auto"
             src="/videos/hero.mp4"
-            className="absolute inset-0 w-full h-full object-cover object-[75%_15%] md:object-center"
+            className="absolute inset-0 w-full h-full object-cover object-[75%_10%] md:object-center"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/30 to-transparent"></div>
