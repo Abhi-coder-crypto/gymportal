@@ -43,7 +43,7 @@ import { SiWhatsapp } from "react-icons/si";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import transformationImage from "@assets/generated_images/Transformation_before_after_results_1ed81a38.png";
 import workoutVideo from "@assets/5319089-uhd_3840_2160_25fps_1762541494599.mp4";
-import heroVideo from "@assets/hero-background.mp4";
+import heroVideo from "@assets/4325592-uhd_4096_2160_25fps_1762544359197.mp4";
 import onlineClassImage from "@assets/generated_images/Online_fitness_class_women_c03f2b22.png";
 import trainer1Image from "@assets/stock_images/indian_female_fitnes_26f1d39f.jpg";
 import trainer2Image from "@assets/generated_images/Zumba_instructor_dancing_portrait_1640c3fe.png";
@@ -254,18 +254,18 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full min-h-[calc(100vh-5rem)] flex items-center overflow-hidden">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full bg-neutral-800">
           <video 
             autoPlay 
             loop 
             muted 
             playsInline
-            className="absolute inset-0 min-w-full min-h-full w-auto h-auto max-w-none object-cover block"
-          >
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+            preload="auto"
+            src="/videos/hero.mp4"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/30 to-transparent"></div>
         </div>
         
         {/* Content */}
@@ -274,7 +274,7 @@ export default function Home() {
             <div className="space-y-5 md:space-y-6">
               <h1 className="font-heading font-bold leading-[1.15] tracking-tight text-white text-center lg:text-left" style={{ fontSize: 'clamp(2rem, 7vw, 3.5rem)' }}>
                 Transform Your
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary to-primary/90 mt-2">
+                <span className="block text-primary mt-2">
                   Body & Mind
                 </span>
               </h1>
@@ -285,7 +285,7 @@ export default function Home() {
                 <Button 
                   onClick={openWhatsApp} 
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-8 py-6 shadow-xl shadow-primary/40 hover:shadow-2xl hover:shadow-primary/50 transition-all hover:scale-105 bg-primary hover:bg-primary/90 font-bold text-base"
+                  className="w-full sm:w-auto rounded-full px-8 py-6 transition-all hover:scale-105 bg-primary hover:bg-primary/90 font-semibold text-base"
                   data-testid="button-book-consultation-hero"
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />
@@ -294,7 +294,7 @@ export default function Home() {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="w-full sm:w-auto rounded-full px-8 py-6 border-2 border-white bg-white/95 hover:bg-white hover:border-white transition-all hover:scale-105 font-bold text-base text-foreground shadow-lg"
+                  className="w-full sm:w-auto rounded-full px-8 py-6 border-2 border-white bg-white/95 hover:bg-white hover:border-white transition-all hover:scale-105 font-semibold text-base text-foreground"
                   onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
                   data-testid="button-view-packages"
                 >
@@ -306,7 +306,7 @@ export default function Home() {
                   href={GOOGLE_REVIEWS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex flex-wrap items-center gap-3 lg:gap-5 bg-white/95 hover:bg-white backdrop-blur-sm px-5 py-3 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 cursor-pointer group border border-white/50 hover:border-primary/50 shadow-lg"
+                  className="inline-flex flex-wrap items-center gap-3 lg:gap-5 bg-white/95 hover:bg-white backdrop-blur-sm px-5 py-3 rounded-2xl transition-all duration-300 cursor-pointer group border border-white/50 hover:border-primary/50"
                 >
                   <div className="flex items-center gap-2">
                     <div className="flex group-hover:scale-110 transition-transform duration-300">
