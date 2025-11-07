@@ -643,37 +643,37 @@ export default function Home() {
                 ]
               },
             ].map((pkg, i) => (
-              <Card key={i} className={`group p-6 md:p-7 hover-elevate transition-all duration-500 ${pkg.featured ? 'border-primary border-2 shadow-xl shadow-primary/20 bg-gradient-to-br from-primary/5 to-accent/5' : 'border-primary/10 shadow-lg shadow-primary/5 bg-gradient-to-br from-background to-accent/5'} hover:shadow-xl hover:shadow-primary/20 hover:border-primary/30 relative overflow-hidden`}>
+              <Card key={i} className={`group p-4 md:p-5 hover-elevate transition-all duration-500 ${pkg.featured ? 'border-primary border-2 shadow-lg shadow-primary/15 bg-gradient-to-br from-primary/5 to-accent/5' : 'border-primary/10 shadow-md shadow-primary/5 bg-gradient-to-br from-background to-accent/5'} hover:shadow-lg hover:shadow-primary/15 hover:border-primary/30 relative overflow-hidden`}>
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-accent ${pkg.featured ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'} transition-opacity duration-500`} />
-                <CardContent className="p-0 space-y-5 md:space-y-6">
+                <CardContent className="p-0 space-y-3 md:space-y-4">
                   {pkg.featured && (
-                    <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-primary/90 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-md shadow-primary/30">
-                      <Star className="h-3.5 w-3.5 fill-white" />
+                    <div className="inline-flex items-center gap-1.5 bg-gradient-to-r from-primary to-primary/90 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm shadow-primary/30">
+                      <Star className="h-3 w-3 fill-white" />
                       Most Popular
                     </div>
                   )}
                   <div>
-                    <h3 className="font-heading text-xl md:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">{pkg.name}</h3>
-                    <p className="text-foreground/60 font-medium text-sm md:text-base">{pkg.classes}</p>
+                    <h3 className="font-heading text-lg md:text-xl font-bold mb-1 group-hover:text-primary transition-colors">{pkg.name}</h3>
+                    <p className="text-foreground/60 font-medium text-xs md:text-sm">{pkg.classes}</p>
                   </div>
-                  <div className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  <div className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                     {pkg.price}
                   </div>
-                  <ul className="space-y-2.5 md:space-y-3">
+                  <ul className="space-y-2">
                     {pkg.features.map((feature, j) => (
-                      <li key={j} className="flex items-start gap-2.5 group/item">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
-                        <span className="text-sm md:text-base text-foreground/80 leading-relaxed">{feature}</span>
+                      <li key={j} className="flex items-start gap-2 group/item">
+                        <CheckCircle2 className="h-4 w-4 text-primary flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
+                        <span className="text-xs md:text-sm text-foreground/80 leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button 
                     onClick={openWhatsApp} 
-                    className={`w-full rounded-full py-5 text-sm md:text-base font-semibold transition-all duration-300 ${pkg.featured ? 'shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40' : 'hover:bg-primary hover:text-primary-foreground'}`}
+                    className={`w-full rounded-full py-4 text-xs md:text-sm font-semibold transition-all duration-300 ${pkg.featured ? 'shadow-md shadow-primary/30 hover:shadow-lg hover:shadow-primary/40' : 'hover:bg-primary hover:text-primary-foreground'}`}
                     variant={pkg.featured ? "default" : "outline"}
                     data-testid={`button-select-${pkg.name.toLowerCase().replace(' ', '-')}`}
                   >
-                    <MessageCircle className="h-4 w-4 mr-2" />
+                    <MessageCircle className="h-3.5 w-3.5 mr-1.5" />
                     Select Plan
                   </Button>
                 </CardContent>
@@ -739,28 +739,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-6 md:py-8 bg-primary text-primary-foreground">
-        <div className="container px-4 md:px-6 text-center">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Your Best Self Is Waiting — Start Today
-          </h2>
-          <Button 
-            onClick={openWhatsApp} 
-            size="lg" 
-            variant="secondary"
-            className="rounded-full text-lg px-8 py-6"
-            data-testid="button-book-consultation-cta"
-          >
-            <Phone className="h-5 w-5 mr-2" />
-            Book Free Consultation
-          </Button>
-          <p className="mt-6 text-lg flex items-center justify-center gap-2">
-            <Phone className="h-5 w-5" />
-            +91 8600126395
-          </p>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-card border-t py-8">
