@@ -292,12 +292,11 @@ export default function Home() {
             <Button 
               onClick={openWhatsApp} 
               size="lg" 
-              className="rounded-full px-6 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300 relative group overflow-hidden" 
+              className="rounded-full px-6 shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 transition-all duration-300" 
               data-testid="button-book-call-header"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_100%] animate-shimmer opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
-              <MessageCircle className="h-4 w-4 mr-2 relative z-10" />
-              <span className="relative z-10">Book A Free Call</span>
+              <MessageCircle className="h-4 w-4 mr-2" />
+              <span>Book A Free Call</span>
             </Button>
           </motion.div>
         </div>
