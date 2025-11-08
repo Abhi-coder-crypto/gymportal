@@ -46,6 +46,10 @@ import transformationImage from "@assets/stock_images/before_and_after_wei_c6f60
 import workoutVideo from "@assets/5319089-uhd_3840_2160_25fps_1762541494599.mp4";
 import heroVideo from "@assets/4325592-uhd_4096_2160_25fps_1762544359197.mp4";
 import onlineClassImage from "@assets/generated_images/Online_fitness_class_women_c03f2b22.png";
+import transform1 from "@assets/transformation_images/transform1.jpg";
+import transform2 from "@assets/transformation_images/transform2.jpg";
+import transform3 from "@assets/transformation_images/transform3.jpg";
+import transform4 from "@assets/stock_images/before_after_weight__f2fc7d3b.jpg";
 import trainer1Image from "@assets/stock_images/indian_female_fitnes_26f1d39f.jpg";
 import trainer2Image from "@assets/generated_images/Zumba_instructor_dancing_portrait_1640c3fe.png";
 import trainer3Image from "@assets/generated_images/Strength_trainer_portrait_with_dumbbells_a7c3e639.png";
@@ -466,66 +470,63 @@ export default function Home() {
             </div>
             <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold mb-3">
               <span className="text-primary">
-                Shape Your Body
+                Before & After
               </span>
             </h2>
             <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">Real transformations from real women who took the first step towards a healthier lifestyle</p>
           </div>
-          <div className="max-w-6xl mx-auto space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
-                  src={transformationImage} 
-                  alt="Before and after transformation" 
+                  src={transform1} 
+                  alt="Before and after transformation 1" 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '16/10' }}
+                  style={{ aspectRatio: '3/4' }}
+                  data-testid="img-transformation-1"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-sm md:text-lg">Amazing Transformation</p>
-                  <p className="text-white/80 text-xs md:text-sm">Dedication brings results</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white font-semibold text-xs md:text-sm">Amazing Results</p>
                 </div>
               </div>
-              <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
-                  src={onlineClassImage} 
-                  alt="Online fitness class" 
+                  src={transform2} 
+                  alt="Before and after transformation 2" 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '16/10' }}
+                  style={{ aspectRatio: '3/4' }}
+                  data-testid="img-transformation-2"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-sm md:text-lg">Live Interactive Classes</p>
-                  <p className="text-white/80 text-xs md:text-sm">Join from anywhere</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white font-semibold text-xs md:text-sm">Inspiring Change</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
-                  src={yogaImage} 
-                  alt="Yoga and mindfulness" 
+                  src={transform3} 
+                  alt="Before and after transformation 3" 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '16/10' }}
+                  style={{ aspectRatio: '3/4' }}
+                  data-testid="img-transformation-3"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-sm md:text-lg">Yoga & Wellness</p>
-                  <p className="text-white/80 text-xs md:text-sm">Mind-body harmony</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white font-semibold text-xs md:text-sm">Real Progress</p>
                 </div>
               </div>
-              <div className="group relative rounded-2xl md:rounded-3xl overflow-hidden shadow-lg md:shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
-                  src={zumbaImage} 
-                  alt="Zumba dance fitness" 
+                  src={transform4} 
+                  alt="Before and after transformation 4" 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '16/10' }}
+                  style={{ aspectRatio: '3/4' }}
+                  data-testid="img-transformation-4"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-sm md:text-lg">Dance & Energy</p>
-                  <p className="text-white/80 text-xs md:text-sm">Fun cardio workouts</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                  <p className="text-white font-semibold text-xs md:text-sm">Life Changing</p>
                 </div>
               </div>
             </div>
