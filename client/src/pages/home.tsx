@@ -507,26 +507,24 @@ export default function Home() {
                   <p className="text-white font-semibold text-xs md:text-sm">Inspiring Change</p>
                 </div>
               </div>
-              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 h-64 md:h-80">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
                   src={transform3} 
                   alt="Before and after transformation 3" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '4/3', maxHeight: '300px', objectPosition: 'center top' }}
+                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                   data-testid="img-transformation-3"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <p className="text-white font-semibold text-xs md:text-sm">Real Progress</p>
                 </div>
               </div>
-              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
+              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1 h-64 md:h-80">
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
                   src={transform4} 
                   alt="Before and after transformation 4" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '4/3', maxHeight: '300px', objectPosition: 'center top' }}
+                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                   data-testid="img-transformation-4"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
