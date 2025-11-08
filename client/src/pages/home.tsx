@@ -573,6 +573,98 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Instagram Videos Section */}
+      <section className="py-10 md:py-14 bg-background" id="instagram-videos">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-10">
+            <div className="inline-block mb-4">
+              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30 border border-primary/20">
+                Follow Our Journey
+              </span>
+            </div>
+            <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold mb-3">
+              <span className="text-primary">
+                Real Stories, Real Results
+              </span>
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
+              Watch our community's inspiring transformation journey on Instagram
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto space-y-6">
+            {/* Video 1 */}
+            <Card className="overflow-hidden hover-elevate">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://www.instagram.com/reel/DP6Ilq_DBlp/embed"
+                  className="w-full"
+                  style={{ minHeight: '600px', border: 'none' }}
+                  scrolling="no"
+                  allowFullScreen
+                  data-testid="instagram-video-1"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Video 2 */}
+            <Card className="overflow-hidden hover-elevate">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://www.instagram.com/reel/DOqYABbiSV4/embed"
+                  className="w-full"
+                  style={{ minHeight: '600px', border: 'none' }}
+                  scrolling="no"
+                  allowFullScreen
+                  data-testid="instagram-video-2"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Video 3 */}
+            <Card className="overflow-hidden hover-elevate">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://www.instagram.com/reel/DNmyhHlpq5f/embed"
+                  className="w-full"
+                  style={{ minHeight: '600px', border: 'none' }}
+                  scrolling="no"
+                  allowFullScreen
+                  data-testid="instagram-video-3"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Video 4 */}
+            <Card className="overflow-hidden hover-elevate">
+              <CardContent className="p-0">
+                <iframe
+                  src="https://www.instagram.com/reel/DGaqoK7TY0b/embed"
+                  className="w-full"
+                  style={{ minHeight: '600px', border: 'none' }}
+                  scrolling="no"
+                  allowFullScreen
+                  data-testid="instagram-video-4"
+                />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Call-to-Action */}
+          <div className="text-center mt-10">
+            <Button
+              size="lg"
+              className="rounded-full px-8"
+              onClick={() => window.open('https://www.instagram.com/hocfitnessofficial/', '_blank')}
+              data-testid="button-follow-instagram"
+            >
+              <Instagram className="h-5 w-5 mr-2" />
+              Follow Us on Instagram
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Program Details */}
       <section className="pt-10 md:pt-14 py-8 md:py-12 bg-gradient-to-br from-primary/5 to-accent/10 relative overflow-hidden" id="program">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.08),transparent_60%)]" />
