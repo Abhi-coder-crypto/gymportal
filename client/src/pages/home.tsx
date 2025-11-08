@@ -48,8 +48,9 @@ import heroVideo from "@assets/4325592-uhd_4096_2160_25fps_1762544359197.mp4";
 import onlineClassImage from "@assets/generated_images/Online_fitness_class_women_c03f2b22.png";
 import transform1 from "@assets/transformation_images/transform1.jpg";
 import transform2 from "@assets/transformation_images/transform2.jpg";
-import transform3 from "@assets/transformation_images/transform3-with-face.png";
-import transform4 from "@assets/transformation_images/transform4-with-face.png";
+
+const transform3 = "https://i.ytimg.com/vi/4U6GE6Y0pXw/maxresdefault.jpg";
+const transform4 = "https://i.ytimg.com/vi/lDg8GVpBA6c/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBy8EPf-HfmdeHQZsc13S-3b7ck2A";
 import trainer1Image from "@assets/stock_images/indian_female_fitnes_26f1d39f.jpg";
 import trainer2Image from "@assets/generated_images/Zumba_instructor_dancing_portrait_1640c3fe.png";
 import trainer3Image from "@assets/generated_images/Strength_trainer_portrait_with_dumbbells_a7c3e639.png";
