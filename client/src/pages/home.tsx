@@ -411,7 +411,7 @@ export default function Home() {
       </section>
 
       {/* Notice Banner */}
-      <AnimatedSection>
+      <AnimatedSection variant="slideInLeft">
         <section className="bg-primary/5 border-y border-primary/20 py-5">
           <div className="container px-4 md:px-6">
             <div className="flex items-center justify-center gap-3 max-w-4xl mx-auto">
@@ -427,14 +427,14 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Contact Form Section */}
-      <AnimatedSection>
+      <AnimatedSection variant="scaleIn">
         <section className="py-10 md:py-12 lg:py-16 bg-gradient-to-br from-primary/5 via-background to-accent/20 relative overflow-hidden" id="contact">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_70%)]" />
         <div className="container px-4 md:px-6 relative">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-6 md:mb-8">
               <div className="inline-block mb-3 md:mb-4">
-                <span className="bg-primary text-black px-5 py-2.5 rounded-full text-xs md:text-sm font-bold shadow-lg shadow-primary/30 border border-primary/20">
+                <span className="bg-primary text-black px-5 py-2.5 rounded-full text-xs md:text-sm font-bold border border-primary/20">
                   Get Started Today
                 </span>
               </div>
@@ -542,12 +542,12 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Transformation Gallery */}
-      <AnimatedSection>
+      <AnimatedSection variant="slideInRight">
         <section className="py-6 md:py-8 pb-10 md:pb-14 bg-gradient-to-b from-background via-primary/5 to-background" id="transformations">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-8">
               <div className="inline-block mb-4">
-                <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30 border border-primary/20">
+                <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold border border-primary/20">
                   Real Results
                 </span>
               </div>
@@ -559,70 +559,50 @@ export default function Home() {
               <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">Real transformations from real women who took the first step towards a healthier lifestyle</p>
             </div>
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 gap-4 md:gap-6">
-              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={transform1} 
-                  alt="Before and after transformation 1" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '4/3', maxHeight: '300px' }}
-                  data-testid="img-transformation-1"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-xs md:text-sm">Amazing Results</p>
-                </div>
-              </div>
-              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={transform2} 
-                  alt="Before and after transformation 2" 
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  style={{ aspectRatio: '4/3', maxHeight: '300px' }}
-                  data-testid="img-transformation-2"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-xs md:text-sm">Inspiring Change</p>
-                </div>
-              </div>
-              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={transform3} 
-                  alt="Before and after transformation 3" 
-                  className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700"
-                  data-testid="img-transformation-3"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-xs md:text-sm">Real Progress</p>
-                </div>
-              </div>
-              <div className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img 
-                  src={transform4} 
-                  alt="Before and after transformation 4" 
-                  className="w-full h-auto transform group-hover:scale-105 transition-transform duration-700"
-                  data-testid="img-transformation-4"
-                />
-                <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <p className="text-white font-semibold text-xs md:text-sm">Life Changing</p>
-                </div>
-              </div>
-            </div>
+            <motion.div 
+              className="grid grid-cols-2 gap-4 md:gap-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+              variants={staggerContainer}
+            >
+              {[
+                { img: transform1, alt: "Before and after transformation 1", text: "Amazing Results", testId: "img-transformation-1", aspectRatio: '4/3' },
+                { img: transform2, alt: "Before and after transformation 2", text: "Inspiring Change", testId: "img-transformation-2", aspectRatio: '4/3' },
+                { img: transform3, alt: "Before and after transformation 3", text: "Real Progress", testId: "img-transformation-3" },
+                { img: transform4, alt: "Before and after transformation 4", text: "Life Changing", testId: "img-transformation-4" }
+              ].map((item, idx) => (
+                <motion.div 
+                  key={idx}
+                  variants={scaleIn}
+                  className="group relative rounded-lg md:rounded-xl overflow-hidden shadow-md md:shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <img 
+                    src={item.img} 
+                    alt={item.alt} 
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                    style={{ aspectRatio: item.aspectRatio || 'auto', maxHeight: item.aspectRatio ? '300px' : 'none' }}
+                    data-testid={item.testId}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-2 md:p-3 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <p className="text-white font-semibold text-xs md:text-sm">{item.text}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
         </section>
       </AnimatedSection>
 
       {/* Instagram Videos Section */}
-      <AnimatedSection>
+      <AnimatedSection variant="zoomRotate">
         <section className="py-8 md:py-10 bg-background" id="instagram-videos">
         <div className="container px-4 md:px-6">
           <div className="text-center mb-6">
             <div className="inline-block mb-3">
-              <span className="bg-primary text-black px-4 py-2 rounded-full text-xs font-bold shadow-lg shadow-primary/30 border border-primary/20">
+              <span className="bg-primary text-black px-4 py-2 rounded-full text-xs font-bold border border-primary/20">
                 Follow Our Journey
               </span>
             </div>
@@ -636,63 +616,35 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-            {/* Video 1 */}
-            <video
-              src={instagramVideo1}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto rounded-md"
-              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-              data-testid="instagram-video-1"
-            >
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Video 2 */}
-            <video
-              src={instagramVideo2}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto rounded-md"
-              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-              data-testid="instagram-video-2"
-            >
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Video 3 */}
-            <video
-              src={instagramVideo3}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto rounded-md"
-              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-              data-testid="instagram-video-3"
-            >
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Video 4 */}
-            <video
-              src={instagramVideo4}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto rounded-md"
-              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-              data-testid="instagram-video-4"
-            >
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <motion.div 
+            className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={staggerContainer}
+          >
+            {[
+              { src: instagramVideo1, testId: "instagram-video-1" },
+              { src: instagramVideo2, testId: "instagram-video-2" },
+              { src: instagramVideo3, testId: "instagram-video-3" },
+              { src: instagramVideo4, testId: "instagram-video-4" }
+            ].map((video, idx) => (
+              <motion.video
+                key={idx}
+                variants={fadeInUp}
+                src={video.src}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-auto rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300"
+                style={{ aspectRatio: '9/16', maxHeight: '400px' }}
+                data-testid={video.testId}
+              >
+                Your browser does not support the video tag.
+              </motion.video>
+            ))}
+          </motion.div>
 
           {/* Call-to-Action */}
           <div className="text-center mt-6">
@@ -711,14 +663,14 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Program Details */}
-      <AnimatedSection>
+      <AnimatedSection variant="fadeIn">
         <section className="pt-10 md:pt-14 py-8 md:py-12 bg-gradient-to-br from-primary/5 to-accent/10 relative overflow-hidden" id="program">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(59,130,246,0.08),transparent_60%)]" />
         <div className="container px-4 md:px-6 relative">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-8">
               <div className="inline-block mb-4">
-                <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold tracking-wide shadow-lg shadow-primary/30 border border-primary/20">
+                <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold tracking-wide border border-primary/20">
                   Exclusively For Women
                 </span>
               </div>
@@ -759,7 +711,7 @@ export default function Home() {
               </div>
               
               <div className="flex justify-center">
-                <div className="inline-flex items-center justify-center gap-2 px-4 md:px-5 py-2.5 md:py-3 rounded-full bg-primary border-2 border-primary/30 shadow-lg shadow-primary/30">
+                <div className="inline-flex items-center justify-center gap-2 px-4 md:px-5 py-2.5 md:py-3 rounded-full bg-primary border-2 border-primary/30">
                 <Zap className="h-4 w-4 md:h-5 md:w-5 text-black flex-shrink-0 animate-pulse" />
                 <span className="text-black font-bold text-xs md:text-sm">You can join Any-class, Any-Time, Any-Day</span>
                 </div>
@@ -771,13 +723,13 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Training Types */}
-      <AnimatedSection>
+      <AnimatedSection variant="slideUp">
         <section className="py-8 md:py-10 lg:py-12 bg-gradient-to-br from-primary/5 via-background to-accent/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(59,130,246,0.05),transparent_50%)]" />
         <div className="container px-4 md:px-6 relative max-w-6xl mx-auto">
           <div className="text-center mb-6 md:mb-8">
             <div className="inline-block mb-3 md:mb-4">
-              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-xs md:text-sm font-bold shadow-lg shadow-primary/30 border border-primary/20">
+              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-xs md:text-sm font-bold border border-primary/20">
                 Diverse Workouts
               </span>
             </div>
@@ -816,13 +768,13 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Pricing Packages */}
-      <AnimatedSection>
+      <AnimatedSection variant="slideInLeft">
         <section className="py-6 md:py-8 relative overflow-hidden" id="pricing">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
         <div className="container px-4 md:px-6 relative">
           <div className="text-center mb-8">
             <div className="inline-block mb-4">
-              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/30 border border-primary/20">
+              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-sm font-bold border border-primary/20">
                 💰 Flexible Pricing
               </span>
             </div>
@@ -915,13 +867,13 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Meet Trainers */}
-      <AnimatedSection>
+      <AnimatedSection variant="scaleIn">
         <section className="py-8 md:py-10 lg:py-12 bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 relative overflow-hidden" id="trainers">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]" />
         <div className="container px-4 md:px-6 relative max-w-5xl mx-auto">
           <div className="text-center mb-6 md:mb-8">
             <div className="inline-block mb-3 md:mb-4">
-              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-xs md:text-sm font-bold shadow-lg shadow-primary/30 border border-primary/20">
+              <span className="bg-primary text-black px-5 py-2.5 rounded-full text-xs md:text-sm font-bold border border-primary/20">
                 Expert Team
               </span>
             </div>
