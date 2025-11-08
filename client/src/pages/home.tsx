@@ -47,7 +47,7 @@ import workoutVideo from "@assets/5319089-uhd_3840_2160_25fps_1762541494599.mp4"
 import heroVideo from "@assets/4325592-uhd_4096_2160_25fps_1762544359197.mp4";
 import onlineClassImage from "@assets/generated_images/Online_fitness_class_women_c03f2b22.png";
 import transform1 from "@assets/transformation_images/transform1.jpg";
-import transform2 from "@assets/transformation_images/transform2.png";
+import transform2 from "@assets/transformation_images/transform2.jpg";
 import transform3 from "@assets/transformation_images/transform3.jpg";
 import transform4 from "@assets/transformation_images/transform4.jpg";
 import trainer1Image from "@assets/stock_images/indian_female_fitnes_26f1d39f.jpg";
