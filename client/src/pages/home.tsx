@@ -602,7 +602,9 @@ export default function Home() {
               <CardContent className="p-1.5">
                 <video
                   src={instagramVideo1}
-                  controls
+                  autoPlay
+                  loop
+                  muted
                   playsInline
                   className="w-full h-auto rounded-md"
                   style={{ aspectRatio: '9/16', maxHeight: '400px' }}
@@ -618,7 +620,9 @@ export default function Home() {
               <CardContent className="p-1.5">
                 <video
                   src={instagramVideo2}
-                  controls
+                  autoPlay
+                  loop
+                  muted
                   playsInline
                   className="w-full h-auto rounded-md"
                   style={{ aspectRatio: '9/16', maxHeight: '400px' }}
@@ -634,7 +638,9 @@ export default function Home() {
               <CardContent className="p-1.5">
                 <video
                   src={instagramVideo3}
-                  controls
+                  autoPlay
+                  loop
+                  muted
                   playsInline
                   className="w-full h-auto rounded-md"
                   style={{ aspectRatio: '9/16', maxHeight: '400px' }}
@@ -650,7 +656,9 @@ export default function Home() {
               <CardContent className="p-1.5">
                 <video
                   src={instagramVideo4}
-                  controls
+                  autoPlay
+                  loop
+                  muted
                   playsInline
                   className="w-full h-auto rounded-md"
                   style={{ aspectRatio: '9/16', maxHeight: '400px' }}
