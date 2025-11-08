@@ -65,7 +65,7 @@ import mobilityImage from "@assets/generated_images/Mobility_and_flexibility_exe
 import yogaImage from "@assets/generated_images/Yoga_meditation_pose_691f5267.png";
 import zumbaImage from "@assets/generated_images/Zumba_dance_fitness_class_875f492b.png";
 import gymLogo from "@assets/gym-logo.png";
-import hocLogo from "@assets/hoc-logo.jpg";
+import hocLogo from "@assets/hoc-logo.png";
 import instagramVideo1 from "@assets/instagram_videos/video1.mp4";
 import instagramVideo2 from "@assets/instagram_videos/video2.mp4";
 import instagramVideo3 from "@assets/instagram_videos/video3.mp4";
@@ -134,12 +134,10 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img 
                 src={hocLogo} 
                 alt="HOC Fitness" 
-                className="h-16 md:h-20 w-auto mix-blend-multiply dark:mix-blend-screen relative transition-transform duration-300 group-hover:scale-105" 
-                style={{ filter: 'brightness(1.2) contrast(1.1)' }}
+                className="h-16 md:h-20 w-auto relative transition-transform duration-300 group-hover:scale-105" 
               />
             </div>
           </motion.div>
