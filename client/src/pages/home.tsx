@@ -596,78 +596,62 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="max-w-3xl mx-auto grid grid-cols-2 gap-3 md:gap-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {/* Video 1 */}
-            <Card className="overflow-hidden hover-elevate">
-              <CardContent className="p-1.5">
-                <video
-                  src={instagramVideo1}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto rounded-md"
-                  style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-                  data-testid="instagram-video-1"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </CardContent>
-            </Card>
+            <video
+              src={instagramVideo1}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-md"
+              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
+              data-testid="instagram-video-1"
+            >
+              Your browser does not support the video tag.
+            </video>
 
             {/* Video 2 */}
-            <Card className="overflow-hidden hover-elevate">
-              <CardContent className="p-1.5">
-                <video
-                  src={instagramVideo2}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto rounded-md"
-                  style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-                  data-testid="instagram-video-2"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </CardContent>
-            </Card>
+            <video
+              src={instagramVideo2}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-md"
+              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
+              data-testid="instagram-video-2"
+            >
+              Your browser does not support the video tag.
+            </video>
 
             {/* Video 3 */}
-            <Card className="overflow-hidden hover-elevate">
-              <CardContent className="p-1.5">
-                <video
-                  src={instagramVideo3}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto rounded-md"
-                  style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-                  data-testid="instagram-video-3"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </CardContent>
-            </Card>
+            <video
+              src={instagramVideo3}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-md"
+              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
+              data-testid="instagram-video-3"
+            >
+              Your browser does not support the video tag.
+            </video>
 
             {/* Video 4 */}
-            <Card className="overflow-hidden hover-elevate">
-              <CardContent className="p-1.5">
-                <video
-                  src={instagramVideo4}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto rounded-md"
-                  style={{ aspectRatio: '9/16', maxHeight: '400px' }}
-                  data-testid="instagram-video-4"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </CardContent>
-            </Card>
+            <video
+              src={instagramVideo4}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto rounded-md"
+              style={{ aspectRatio: '9/16', maxHeight: '400px' }}
+              data-testid="instagram-video-4"
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           {/* Call-to-Action */}
